@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 import "./App.css";
 
-import Header from "./Header";
+import Header from "./components/Header";
+import Loading from "./components/Loading";
+import ErrorMessage from "./components/ErrorMessage";
 
 //connect 에 필요한 모듈
 import { bindActionCreators } from "redux";
@@ -14,6 +16,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Loading loading={this.props.loading} />
+        <ErrorMessage errorMessage={this.props.errorMessage} />
       </div>
     );
   }
