@@ -13,6 +13,14 @@ export function resetAuth() {
   };
 }
 
+export function getAuth(username, password) {
+  return {
+    type: ActionTypes.GET_AUTH,
+    username,
+    password
+  };
+}
+
 export function loadingStart() {
   return {
     type: ActionTypes.LOADING_START
