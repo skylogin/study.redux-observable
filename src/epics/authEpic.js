@@ -1,11 +1,11 @@
-import { from } from "exjs";
+import { from } from "rxjs";
 import {
   switchMap,
   mergeMap,
   startWith,
   catchError,
   concat
-} from "exjs/operators";
+} from "rxjs/operators";
 import { ofType } from "redux-observable";
 
 import * as ActionTypes from "../constants/ActionTypes";
