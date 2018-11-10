@@ -7,6 +7,7 @@ import Loading from "./components/Loading";
 import ErrorMessage from "./components/ErrorMessage";
 
 import Login from "./Login";
+import Logout from "./Logout";
 
 //connect 에 필요한 모듈
 import { bindActionCreators } from "redux";
@@ -19,6 +20,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Login auth={this.props.auth} actions={this.props.actions} />
+        <Logout auth={this.props.auth} actions={this.props.actions} />
         <Loading loading={this.props.loading} />
         <ErrorMessage errorMessage={this.props.errorMessage} />
       </div>
